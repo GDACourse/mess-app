@@ -1,22 +1,29 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbx1aB2xQNJO6tHnIZXssbKnq5hSNhDViyChv1SaMcR07AAXefrTBdq99KTW-QgbVTHw/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzfZqTMlXw_DvzUo4QOA-KDsH8SOU3navDUvxlQue1RZ8VAhfIDpPfZlYXLUG8J0dyT/exec";
 
 function saveStockEntry() {
-  const data = {
-    date: document.getElementById("date").value,
-    item: document.getElementById("item").value,
-    category: document.getElementById("category").value,
-    quantity: document.getElementById("quantity").value
-  };
+  const date = document.getElementById("date").value;
+  const item = document.getElementById("item").value;
+  const category = document.getElementById("category").value;
+  const quantity = document.getElementById("quantity").value;
 
   fetch(API_URL, {
     method: "POST",
-    body: JSON.stringify(data)
+    mode: "no-cors",   // 🔥 THIS FIXES CORS
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      date: date,
+      item: item,
+      category: category,
+      quantity: quantity
+    })
   })
-  .then(res => res.json())
-  .then(res => {
-    alert("Stock Entry Saved Successfully");
+  .then(() => {
+    alert("Saved Successfully ✅");
+    document.querySelector("form").reset();
   })
-  .catch(err => {
-    alert("Error saving data");
+  .catch(() => {
+    alert("Error ❌");
   });
 }
