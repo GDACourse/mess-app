@@ -1,10 +1,13 @@
-<h2>Stock Entry</h2>
+<button onclick="saveEntry()">Save</button>
 
-<input type="date" id="date"><br><br>
-<input type="text" id="item" placeholder="Item Name"><br><br>
-<input type="text" id="category" placeholder="Category"><br><br>
-<input type="number" id="quantity" placeholder="Quantity"><br><br>
-
-<button onclick="saveStockEntry()">Save</button>
-
-<script src="app.js"></script>
+<script>
+function saveEntry() {
+  sendData({
+    type: "entry",
+    date: document.getElementById("date").value,
+    item: document.getElementById("item").value,
+    category: document.getElementById("category").value,
+    quantity: document.getElementById("quantity").value
+  });
+}
+</script>
