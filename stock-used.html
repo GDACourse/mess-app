@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Stock Used</title>
-</head>
-<body>
+<button onclick="saveUsed()">Save</button>
 
-<h2>Stock Used</h2>
-
-<input type="date" id="date"><br><br>
-<input type="text" id="item" placeholder="Item Name"><br><br>
-<input type="text" id="category" placeholder="Category"><br><br>
-<input type="number" id="quantity" placeholder="Quantity Used"><br><br>
-
-<button onclick="saveStockUsed()">Save</button>
-
-<script src="app.js"></script>
-
-</body>
-</html>
+<script>
+function saveUsed() {
+  sendData({
+    type: "used",
+    date: document.getElementById("date").value,
+    item: document.getElementById("item").value,
+    category: document.getElementById("category").value,
+    quantity: document.getElementById("quantity").value
+  });
+}
+</script>
