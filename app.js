@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbwXvp22mgRl2AXyqD4ZSLYfM_YrUhYCv-DuKboTn6NCTf-W_baFsClTvT47oH_jTxEr/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbxf4i-TLzvs1XWyQrKbH_MVq9hoOWo-qYx5z4ItSZd9pI0Tuex1x44sC8b9oFeqaSCm/exec";
 
 function saveStockEntry() {
   const date = document.getElementById("date").value;
