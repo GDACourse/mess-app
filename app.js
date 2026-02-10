@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbxcyX9v4CoA4iVsG85mOb7xOnNpUuvB6x7Bo-D2ja9JjkP5GxW1ULU9-iUYXIBthbUl/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzHDdpY_mSTVOh3LtUP41Exz8jV20IQkI7pe42UYKqKoWqposAKBNkSMvkRO17D1l76/exec";
 
 function saveStockEntry() {
   const data = {
