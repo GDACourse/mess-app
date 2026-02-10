@@ -1,7 +1,8 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbysyzH9RTgonAmETMOpSAuWstY2MqJOF7Y9svGcyB4vcLow52u10ahpeD22r5zikX0/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbwB9lIzkd0pU0AOg9gMAuW78nq1K8D2V9zM07CSFxpref8OYVw2vG1aeHtnYtXkV6ZU/exec";
 
 function saveStockEntry() {
   const data = {
+    type: "Stock Entry",
     date: document.getElementById("date").value,
     item: document.getElementById("item").value,
     category: document.getElementById("category").value,
@@ -10,18 +11,9 @@ function saveStockEntry() {
 
   fetch(API_URL, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
     body: JSON.stringify(data)
   })
   .then(res => res.text())
-  .then(res => {
-    alert("Stock Entry Saved Successfully");
-    console.log(res);
-  })
-  .catch(err => {
-    alert("Error saving data");
-    console.error(err);
-  });
+  .then(txt => alert(txt))
+  .catch(err => alert("Error"));
 }
