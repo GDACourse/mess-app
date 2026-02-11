@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
   <title>Mess Inventory System</title>
-
-  <!-- Mobile Responsive Meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
     body {
@@ -18,89 +15,69 @@
       height: 100vh;
     }
 
-    .container {
-      width: 95%;
-      max-width: 400px;
+    .card {
       background: white;
       padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       text-align: center;
     }
 
     h2 {
-      margin-bottom: 25px;
-      font-size: 22px;
-      color: #333;
+      margin-bottom: 20px;
     }
 
     .btn {
       display: block;
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
-      font-size: 16px;
-      border: none;
+      padding: 14px;
+      margin: 12px 0;
+      text-decoration: none;
       border-radius: 8px;
-      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
       color: white;
-      transition: 0.3s;
     }
 
     .entry {
-      background-color: #28a745;
-    }
-
-    .entry:hover {
-      background-color: #218838;
+      background: #16a34a;
     }
 
     .used {
-      background-color: #dc3545;
-    }
-
-    .used:hover {
-      background-color: #c82333;
+      background: #dc2626;
     }
 
     .report {
-      background-color: #007bff;
+      background: #0284c7;
     }
 
-    .report:hover {
-      background-color: #0069d9;
+    .monthly {
+      background: linear-gradient(45deg, #7c3aed, #9333ea);
     }
 
     .footer {
-      margin-top: 20px;
       font-size: 12px;
-      color: #888;
+      margin-top: 15px;
+      color: gray;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h2>Mess Inventory System</h2>
+<div class="card">
+  <h2>Mess Inventory System</h2>
 
-    <button class="btn entry" onclick="location.href='stock-entry.html'">
-      ➕ Stock Entry
-    </button>
+  <a href="stock-entry.html" class="btn entry">➕ Stock Entry</a>
+  <a href="stock-used.html" class="btn used">➖ Stock Used</a>
+  <a href="stock-report.html" class="btn report">📊 View Report</a>
+  <a href="monthly-report.html" class="btn monthly">📅 Monthly Report</a>
 
-    <button class="btn used" onclick="location.href='stock-used.html'">
-      ➖ Stock Used
-    </button>
-
-    <button class="btn report" onclick="location.href='stock-report.html'">
-      📊 View Report
-    </button>
-
-    <div class="footer">
-      Sigma Career Academy
-    </div>
+  <div class="footer">
+    Sigma Career Academy
   </div>
+</div>
 
 </body>
 </html>
-
