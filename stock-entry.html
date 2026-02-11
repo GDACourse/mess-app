@@ -1,20 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Stock Entry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 420px;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .back {
+      margin-top: 10px;
+      background: #6c757d;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>Stock Entry</h2>
+  <div class="container">
+    <h2>Stock Entry</h2>
 
-<input type="date" id="entryDate"><br><br>
-<input type="text" id="entryItem" placeholder="Item Name"><br><br>
-<input type="text" id="entryCategory" placeholder="Category"><br><br>
-<input type="number" step="0.01" id="entryQuantity" placeholder="Quantity"><br><br>
+    <input type="date" id="entryDate">
+    <input type="text" id="entryItem" placeholder="Item Name">
+    <input type="text" id="entryCategory" placeholder="Category">
+    <input type="number" step="0.01" id="entryQuantity" placeholder="Quantity">
 
-<button onclick="saveStockEntry()">Save Entry</button>
+    <button onclick="saveStockEntry()">Save Entry</button>
+    <button class="back" onclick="location.href='index.html'">Back</button>
+  </div>
 
-<script src="app.js"></script>
-
+  <script src="app.js"></script>
 </body>
 </html>
